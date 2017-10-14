@@ -12,7 +12,8 @@ namespace XamarinDevOpsDemo
         {
             InitializeComponent();
 
-            SetMainPage();
+            //SetMainPage();
+            MainPage = new NavigationPage(new SessionDataPage());
         }
 
         public static void SetMainPage()
