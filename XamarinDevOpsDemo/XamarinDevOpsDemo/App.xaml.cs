@@ -12,8 +12,7 @@ namespace XamarinDevOpsDemo
         {
             InitializeComponent();
 
-            //SetMainPage();
-            MainPage = new NavigationPage(new SessionDataPage());
+            SetMainPage();
         }
 
         public static void SetMainPage()
@@ -27,7 +26,11 @@ namespace XamarinDevOpsDemo
                         Title = "Browse",
                         Icon = Device.OnPlatform("tab_feed.png",null,null)
                     },
-                    new NavigationPage(new AboutPage())
+                    new NavigationPage(new SessionDataPage())
+                    {
+                        Title = "Session",
+                        Icon = Device.OnPlatform("tab_feed.png",null,null)
+                    },new NavigationPage(new AboutPage())
                     {
                         Title = "About",
                         Icon = Device.OnPlatform("tab_about.png",null,null)
