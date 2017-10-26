@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinDevOpsDemo", "XamarinDevOpsDemo\XamarinDevOpsDemo\XamarinDevOpsDemo.csproj", "{272D4D7B-FD52-423D-9CCD-A6479A25AD02}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinDevOpsDemo", "src\XamarinDevOpsDemo\XamarinDevOpsDemo.csproj", "{272D4D7B-FD52-423D-9CCD-A6479A25AD02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinDevOpsDemo.Android", "XamarinDevOpsDemo\XamarinDevOpsDemo.Android\XamarinDevOpsDemo.Android.csproj", "{E8571ECA-B7A5-43B9-AEBA-DC6CE3EF501A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinDevOpsDemo.Android", "src\XamarinDevOpsDemo.Android\XamarinDevOpsDemo.Android.csproj", "{E8571ECA-B7A5-43B9-AEBA-DC6CE3EF501A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinDevOpsDemo.iOS", "XamarinDevOpsDemo\XamarinDevOpsDemo.iOS\XamarinDevOpsDemo.iOS.csproj", "{8291532D-5B3E-4BFF-88B2-70BFD5259782}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinDevOpsDemo.iOS", "src\XamarinDevOpsDemo.iOS\XamarinDevOpsDemo.iOS.csproj", "{8291532D-5B3E-4BFF-88B2-70BFD5259782}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
