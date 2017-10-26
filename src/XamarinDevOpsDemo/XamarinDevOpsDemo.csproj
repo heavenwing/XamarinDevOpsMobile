@@ -40,6 +40,7 @@
     </Compile>
     <Compile Include="Helpers\AssemblyBuildNumberAttribute.cs" />
     <Compile Include="Helpers\AssemblyCodeVersionAttribute.cs" />
+    <Compile Include="Helpers\Constants.cs" />
     <Compile Include="Helpers\MessengingCenterAlert.cs" />
     <Compile Include="Helpers\ObservableObject.cs" />
     <Compile Include="Helpers\ObservableRangeCollection.cs" />

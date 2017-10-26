@@ -2,8 +2,8 @@ Param(
     [string]$buildSymbol
 )
 
-$content = Get-Content(".\src\XamarinDevOpsDemo\Tools\ConstantTools.cs")
+$content = Get-Content(".\src\XamarinDevOpsDemo\Helpers\Constants.cs")
 $content[0] = "#define " + $buildSymbol
 $content[1] = ""
 $content[2] = ""
-$content | Out-File -Encoding utf8 ".\src\XamarinDevOpsDemo\Tools\ConstantTools.cs"
+$content | Out-File -Encoding utf8 ".\src\XamarinDevOpsDemo\Helpers\Constants.cs"
