@@ -32,27 +32,9 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <Label FontSize="18">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text="BuildNumber :" FontAttributes="Bold" FontSize="18"/>
-                                <Span Text=" "/>
-                                <Span Text="{Binding BuildNumber}" ForegroundColor="{StaticResource LightTextColor}"/>
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
+                <Label FontSize="18" Text="{Binding BuildNumber}">
                 </Label>
-                <Label FontSize="18">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text="CodeVersion :" FontAttributes="Bold" FontSize="18"/>
-                                <Span Text=" "/>
-                                <Span Text="{Binding CodeVersion}" ForegroundColor="{StaticResource LightTextColor}"/>
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
+                <Label FontSize="18" Text="{Binding CodeVersion}">
                 </Label>
                 <Label>
                     <Label.FormattedText>
