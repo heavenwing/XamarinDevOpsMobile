@@ -1,10 +1,10 @@
 Param(
+    [string]$server,
     [string]$appId,
     [string]$platform,
     [string]$version
 )
 
-$Server = 'localhost:44361'
 $Url = "https://${server}/api/Update"
 
 $Body = @{
