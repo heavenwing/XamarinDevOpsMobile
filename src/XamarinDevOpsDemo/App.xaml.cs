@@ -5,6 +5,7 @@ using Xamarin.Forms.Xaml;
 using Microsoft.Azure.Mobile;
 using Microsoft.Azure.Mobile.Analytics;
 using Microsoft.Azure.Mobile.Crashes;
+using XF = Xamarin.Forms;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace XamarinDevOpsDemo
@@ -30,16 +31,16 @@ namespace XamarinDevOpsDemo
                     new NavigationPage(new ItemsPage())
                     {
                         Title = "Browse",
-                        Icon = Device.OnPlatform("tab_feed.png",null,null)
+                        Icon = XF.Device.OnPlatform("tab_feed.png",null,null)
                     },
                     new NavigationPage(new SessionDataPage())
                     {
                         Title = "Session",
-                        Icon = Device.OnPlatform("tab_feed.png",null,null)
+                        Icon = XF.Device.OnPlatform("tab_feed.png",null,null)
                     },new NavigationPage(new AboutPage())
                     {
                         Title = "About",
-                        Icon = Device.OnPlatform("tab_about.png",null,null)
+                        Icon = XF.Device.OnPlatform("tab_about.png",null,null)
                     },
                 }
             };
