@@ -3,9 +3,16 @@
     [string]$appName
 )
 
-$xml = [xml](Get-Content -Encoding UTF8 ".\src\XamarinDevOpsDemo.Android\Properties\AndroidManifest.xml")
+$xmlManifest = [xml](Get-Content -Encoding UTF8 ".\src\XamarinDevOpsDemo.Android\Properties\AndroidManifest.xml")
 
-$xml.manifest.package = $appId
-$xml.manifest.application.SetAttribute("label", "http://schemas.android.com/apk/res/android", $appName)
+$xmlManifest.manifest.package = $appId
+#$xmlManifest.manifest.application.SetAttribute("label", "http://schemas.android.com/apk/res/android", $appName)
 
-$xml.Save(".\src\XamarinDevOpsDemo.Android\Properties\AndroidManifest.xml")
+$xmlManifest.Save(".\src\XamarinDevOpsDemo.Android\Properties\AndroidManifest.xml")
+
+$xmlRes = [xml](Get-Content -Encoding UTF8 ".\src\XamarinDevOpsDemo.Android\Resources\values\strings.xml")
+
+$app_name = $xmlRes.SelectNodes("resources/string[1]")
+$app_name.set_InnerText("abc")
+
+$xmlRes.Save(".\src\XamarinDevOpsDemo.Android\Resources\values\strings.xml")
