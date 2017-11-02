@@ -13,6 +13,6 @@ $xmlManifest.Save(".\src\XamarinDevOpsDemo.Android\Properties\AndroidManifest.xm
 $xmlRes = [xml](Get-Content -Encoding UTF8 ".\src\XamarinDevOpsDemo.Android\Resources\values\strings.xml")
 
 $app_name = $xmlRes.SelectNodes("resources/string[1]")
-$app_name.set_InnerText("abc")
+$app_name.set_InnerText($appName)
 
 $xmlRes.Save(".\src\XamarinDevOpsDemo.Android\Resources\values\strings.xml")
