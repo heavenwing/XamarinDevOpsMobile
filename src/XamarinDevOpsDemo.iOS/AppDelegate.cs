@@ -1,6 +1,7 @@
 ﻿
 using Foundation;
 using UIKit;
+using Xam.Plugin.WebView.iOS;
 
 namespace XamarinDevOpsDemo.iOS
 {
@@ -9,6 +10,7 @@ namespace XamarinDevOpsDemo.iOS
 	{
 		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 		{
+			FormsWebViewRenderer.Initialize();
 			global::Xamarin.Forms.Forms.Init();
 			LoadApplication(new App());
 

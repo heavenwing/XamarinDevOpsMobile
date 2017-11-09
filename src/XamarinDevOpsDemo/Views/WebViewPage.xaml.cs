@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xam.Plugin.WebView.Abstractions.Enumerations;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -49,14 +49,8 @@ namespace XamarinDevOpsDemo.Views
                 }
             });
 
-            wv.ContentType = Xam.Plugin.WebView.Abstractions.Enumerations.WebViewContentType.StringData;
-            wv.Source = @"
-<html><body>
-<button onclick=""mobilePlatform_TakePhoto()"">TakePhoto</button>
-<button onclick=""mobilePlatform_TakeVideo()"">TakeVideo</button>
-<button onclick=""mobilePlatform_GetPosition()"">GetPosition</button>
-<body><html>
-";
+            wv.ContentType = WebViewContentType.Internet;
+            wv.Source = "https://xamarincd.chinacloudsites.cn/webview.html";
            
         }
     }

@@ -40,5 +40,22 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+  <key>NSAppTransportSecurity</key>
+  <dict>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
+  </dict>
+  <key>NSCameraUsageDescription</key>
+  <string>This app needs access to the camera to take photos.</string>
+  <key>NSPhotoLibraryUsageDescription</key>
+  <string>This app needs access to photos.</string>
+  <key>NSMicrophoneUsageDescription</key>
+  <string>This app needs access to microphone.</string>
+  <key>NSLocationWhenInUseUsageDescription</key>
+  <string>This app needs access location when open.</string>
+  <key>NSLocationAlwaysUsageDescription</key>
+  <string>This app needs access always to location.</string>
+  <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+  <string>This app needs access location when open and in the background.</string>
 </dict>
 </plist>
