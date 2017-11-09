@@ -3,6 +3,8 @@ using Android.Content.PM;
 using Android.OS;
 using Plugin.CurrentActivity;
 using Plugin.Fingerprint;
+using Plugin.Permissions;
+using Xam.Plugin.WebView.Droid;
 
 namespace XamarinDevOpsDemo.Droid
 {
@@ -17,9 +19,15 @@ namespace XamarinDevOpsDemo.Droid
             base.OnCreate(bundle);
 
             CrossFingerprint.SetCurrentActivityResolver(() => CrossCurrentActivity.Current.Activity);
+            FormsWebViewRenderer.Initialize();
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
             LoadApplication(new App());
+        }
+
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)
+        {
+            PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
 }

@@ -65,6 +65,9 @@
     <Compile Include="Views\NewItemPage.xaml.cs">
       <DependentUpon>NewItemPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\WebViewPage.xaml.cs">
+      <DependentUpon>WebViewPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\SessionDataPage.xaml.cs">
       <DependentUpon>SessionDataPage.xaml</DependentUpon>
     </Compile>
@@ -113,6 +116,21 @@
     <Reference Include="Plugin.Fingerprint.Abstractions, Version=1.4.5.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Plugin.Fingerprint.1.4.5\lib\portable-net45+win8+wpa81+wp8\Plugin.Fingerprint.Abstractions.dll</HintPath>
     </Reference>
+    <Reference Include="Plugin.Geolocator, Version=4.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.Geolocator.4.1.2\lib\netstandard1.0\Plugin.Geolocator.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Geolocator.Abstractions, Version=4.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.Geolocator.4.1.2\lib\netstandard1.0\Plugin.Geolocator.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Media, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.Media.3.0.1\lib\netstandard1.0\Plugin.Media.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Media.Abstractions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.Media.3.0.1\lib\netstandard1.0\Plugin.Media.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Xam.Plugin.WebView.Abstractions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.WebView.2.1.2\lib\netstandard1.0\Xam.Plugin.WebView.Abstractions.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.4.0.18342\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
@@ -138,6 +156,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\SessionDataPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\WebViewPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
