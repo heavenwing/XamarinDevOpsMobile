@@ -33,19 +33,19 @@ namespace XamarinDevOpsDemo.Views
 
         async void AddItem_Clicked(object sender, EventArgs e)
         {
-            if (await CrossFingerprint.Current.IsAvailableAsync(true))
-            {
-                var result = await CrossFingerprint.Current.AuthenticateAsync("Prove you have fingers!");
-                if (result.Authenticated)
-                {
-                    await Navigation.PushAsync(new NewItemPage());
-                }
-                else
-                {
-                    await DisplayAlert("Error", "not allowed to do secret stuff :(", "OK");
-                }
-            }
-            else
+            //if (await CrossFingerprint.Current.IsAvailableAsync(true))
+            //{
+            //    var result = await CrossFingerprint.Current.AuthenticateAsync("Prove you have fingers!");
+            //    if (result.Authenticated)
+            //    {
+            //        await Navigation.PushAsync(new NewItemPage());
+            //    }
+            //    else
+            //    {
+            //        await DisplayAlert("Error", "not allowed to do secret stuff :(", "OK");
+            //    }
+            //}
+            //else
                 await Navigation.PushAsync(new NewItemPage());
         }
 

@@ -64,5 +64,11 @@
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XamarinDevOpsDemo.Android\XamarinDevOpsDemo.Android.csproj">
+      <Project>{e8571eca-b7a5-43b9-aeba-dc6ce3ef501a}</Project>
+      <Name>XamarinDevOpsDemo.Android</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

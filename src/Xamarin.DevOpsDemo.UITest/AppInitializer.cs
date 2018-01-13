@@ -14,6 +14,7 @@ namespace Xamarin.DevOpsDemo.UITest
             {
                 return ConfigureApp
                     .Android
+                    .InstalledApp("cloud.zyg.XamarinDevOpsDemo")
                     .StartApp();
             }
 
