@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xam.Plugin.WebView.Abstractions.Delegates;
 using Xam.Plugin.WebView.Abstractions.Enumerations;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -26,6 +27,7 @@ namespace XamarinDevOpsDemo.Views
                 {
                     var result = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions());
                     Debug.WriteLine(result?.Path);
+                    await wv.InjectJavascriptAsync($"mobilePlatform_TakePhotoCallback('{result?.Path}')");
                 }
             });
             wv.AddLocalCallback("mobilePlatform_TakeVideo", async (args) => {
@@ -51,7 +53,19 @@ namespace XamarinDevOpsDemo.Views
 
             wv.ContentType = WebViewContentType.Internet;
             wv.Source = "https://xamarincd.chinacloudsites.cn/webview.html";
+
+            wv.OnNavigationStarted += Wv_OnNavigationStarted;
            
+        }
+
+        private void Wv_OnNavigationStarted(object sender, DecisionHandlerDelegate e)
+        {
+            if (e.Uri.StartsWith("http://NavigationTitle"))
+            {
+                e.Cancel = true;
+                var uri = new Uri(e.Uri);
+                Debug.WriteLine(uri.Query);
+            }
         }
     }
 }
